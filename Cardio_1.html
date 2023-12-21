@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            /* font-family: 'Arial', sans-serif; */
+            background-color: white;
+            font-style: oblique;
+            margin: 20px;
+        }
+
+        /* Enhanced CSS styles for the title "Cardio" and logo */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        /* Enhanced CSS styles for the title "Cardio" */
+        h1 {
+            color: darkred;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            color: chocolate;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: brown;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: chocolate;
+            color: rgb(48, 18, 18);
+            cursor: pointer;
+            font-style: italic;
+            font-size: 25px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: forestgreen;
+        }
+    </style>
+
+    <style>
+        /* CSS styles go here */
+        h1 {
+            color: #333;
+            /* Text color */
+            font-family: 'Arial', sans-serif;
+            /* Font family */
+            text-align: center;
+            /* Text alignment */
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            /* Adjust margin as needed */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+            /* Adjust margin as needed */
+        }
+
+        .text-container {
+            flex-grow: 1;
+            /* Allow the text to take up the remaining space */
+        }
+
+        /* Additional styles for the footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .text-container_1 {
+            flex-grow: 1;
+            text-align: center;
+            background-color: brown;
+            color: white;
+            font-size: 30px;
+            /* Background color for the rectangle */
+            padding: 15px;
+            /* Adjust the padding for spacing */
+            border-radius: 4px;
+            /* Optional: Add rounded corners */
+        }
+
+        .text-container_2 {
+            flex-grow: 1;
+            text-align: left;
+            background-color: brown;
+            color: white;
+            font-size: 30px;
+            /* Background color for the rectangle */
+            padding: 40px;
+            /* Adjust the padding for spacing */
+            border-radius: 4px;
+            /* Optional: Add rounded corners */
+        }
+
+        .text-container_3 {
+            flex-grow: 1;
+            text-align: left;
+            background-color: brown;
+            color: white;
+            font-size: 30px;
+            /* Background color for the rectangle */
+            padding: 40px;
+            /* Adjust the padding for spacing */
+            border-radius: 4px;
+            /* Optional: Add rounded corners */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Logo and Title -->
+    <div class="header-container">
+        <img src="logo7.png" alt="Company Logo" width="100" height="100">
+        <h1>Cardio</h1>
+    </div>
+
+    <div class="text-container_1">
+        <p>
+            Home exercises that help gain or lose weight,
+            You can perform exercises easily without having to go to the gym.
+            You can contact us and we can determine your exercises for you.
+        </p>
+    </div>
+
+    <!-- First image and paragraph -->
+    <div class="content-container">
+        <img src="image_3.jpg" alt="Image 1" width="300" height="300">
+        <div class="text-container_2">
+            <p>
+                Exercise helps stimulate blood circulation.
+            </p>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+        <video src="video.mp4" width="300" height="300" controls>
+            <!-- Your video source goes here -->
+        </video>
+    </div>
+
+
+    <!-- Second image and paragraph -->
+    <div class="content-container">
+        <img src="image_2.jpg" alt="Image 2" width="300" height="300">
+        <div class="text-container_3">
+            <p>
+                Exercise helps strengthen the heart muscle.
+            </p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form action="index.php" method="post">
+            <h1>Form</h1>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <label for="Age">Age:</label>
+            <input type="text" id="Age" name="Age">
+            <br>
+            <label for="Gender">Gender:</label>
+            <input type="text" id="gender" name="gender">
+            <br>
+            <label for="Email">Email:</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <label for="Password">Password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <label for="PhoneNumber">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number">
+            <br>
+            <input type="submit" value="Login" name="btntest" id="btn1" onclick="validateForm()">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get form elements
+            var fname = document.getElementById('fname').value;
+            var age = document.getElementById('Age').value;
+            var gender = document.getElementById('gender').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+
+            // Simple validation example (you can customize this as needed)
+            if (fname === "") {
+                document.getElementById('fnameError').innerText = 'First name is required';
+                return;
+            } else {
+                document.getElementById('fnameError').innerText = '';
+            }
+
+            if (age === "") {
+                document.getElementById('ageError').innerText = 'Age is required';
+                return;
+            } else {
+                document.getElementById('ageError').innerText = '';
+            }
+
+            if (gender === "") {
+                document.getElementById('genderError').innerText = 'Gender is required';
+                return;
+            } else {
+                document.getElementById('genderError').innerText = '';
+            }
+
+            if (email === "") {
+                document.getElementById('emailError').innerText = 'Email is required';
+                return;
+            } else {
+                document.getElementById('emailError').innerText = '';
+            }
+
+            if (password === "") {
+                document.getElementById('passwordError').innerText = 'Password is required';
+                return;
+            } else {
+                document.getElementById('passwordError').innerText = '';
+            }
+
+            if (phoneNumber === "") {
+                document.getElementById('phoneNumberError').innerText = 'Phone Number is required';
+                return;
+            } else {
+                document.getElementById('phoneNumberError').innerText = '';
+            }
+
+            // If all validations pass, you can submit the form or perform other actions
+            alert('Form submitted successfully!');
+            // Uncomment the line below to submit the form programmatically
+            // document.getElementById('myForm').submit();
+        }
+    </script>
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 Cardio. Naira Mohamed.
+    </footer>
+
+
+</body>
+
+</html>
